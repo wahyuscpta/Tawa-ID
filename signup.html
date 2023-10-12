@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <title>TAWA.ID - Inovasi Komedi Digital</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="signin-signup" style="transform: translateY(100px);opacity: 0;">
+            <form action="" class="sign-in-form">
+
+                <h2 class="title">Selamat Datang Kembali</h2>
+
+                <p class="social-text">Masuk menggunakan sosial media</p>
+
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <a href="#" class="forgot">Lupa Password ?</a>
+
+                <button class="btn">Masuk</button>            
+                
+            </form>
+
+            <form action="" class="sign-up-form">
+                <h2 class="title">Registrasi Akun</h2>
+
+                <p class="social-text">Daftar menggunakan akun sosial media</p>
+
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username">
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email">
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Konfirmasi Password">
+                </div>
+
+                <button href="signup.html" class="btn" style="margin-top: 30px;">Daftar</button>
+
+            </form>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel" >
+                <div class="content">
+                    <h3>Sudah Punya Akun ?</h3>
+                    <p>Silakan masuk kembali untuk melanjutkan pengalaman anda menikmati fitur fitur platform kami."</p>
+                    <button class="btn" id="sign-in-btn" style="margin-top: 30px;background-color: #fff; color: #364F6B;">Masuk</button>
+                </div>
+            </div>
+            <div class="panel right-panel"  style="transform: translateY(100px);opacity: 0;">
+                <div class="content">
+                    <h3>Belum Punya Akun ?</h3>
+                    <p>Daftar sekarang untuk mendapatkan akses eksklusif ke fitur fitur dari platform kami.</p>
+                    <button class="btn" id="sign-up-btn" style="margin-top: 30px;background-color: #fff; color: #364F6B;">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script src="jquery v3.6.0/jquery.js"></script>
+
+<script>
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container");
+    const sign_in_btn2 = document.querySelector("#sign-in-btn2");
+    const sign_up_btn2 = document.querySelector("#sign-up-btn2");
+    sign_up_btn.addEventListener("click", () => {
+        container.classList.add("sign-up-mode");
+    });
+    sign_in_btn.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode");
+    });
+    sign_up_btn2.addEventListener("click", () => {
+        container.classList.add("sign-up-mode2");
+    });
+    sign_in_btn2.addEventListener("click", () => {
+        container.classList.remove("sign-up-mode2");
+    });
+</script>
+
+<script>    
+    window.addEventListener("load", function(){
+        $('.container').css({
+            'height': 100 + 'vh',
+            'opacity' : 1,
+            'transition': 1 + 's',
+        });        
+
+        $('.signin-signup').css({
+            'transition': .7 + 's',
+            'transition-delay': 1 + 's',
+            'opacity' : 1,
+            'transform': 'translateY('+ 0 +'px)',
+        });
+        
+        $('.right-panel').css({
+            'transition': .7 + 's',
+            'transition-delay': 1.3 + 's',
+            'opacity' : 1,
+            'transform': 'translateY('+ 0 +'px)',
+        });
+    })
+</script>
